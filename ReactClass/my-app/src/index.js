@@ -5,15 +5,17 @@ import './index.css';
 //import ArticleCollection from './ArticleCollection';
 import reportWebVitals from './reportWebVitals';
 //import GameCollection from './GameCollection';
-import BookExhibition from './BookExhibition';
+//import BookExhibition from './BookExhibition';
+import One from './One';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App />
     <ArticleCollection />
-    <GameCollection /> */}
-    <BookExhibition />
+    <GameCollection />
+    <BookExhibition /> */}
+    <One />
   </React.StrictMode>
 );
 
