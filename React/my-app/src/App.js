@@ -1,25 +1,14 @@
 import React from 'react';
+import HideShow from './HideShow';
 import './App.css';
-
-function App() {
-  constructor(props){
-    super(props);
-    this.state ={show:true}
-}
-delVehicle =() =>{
-    this.setState({show:false});
-}
-render(){
-    let a;
-    if(this.state.show){
-        a=<Car/>;
-    }
-    return(
-        <div>
-            {a}
-            <button type="button" onClick={this.delVehicle}>Del</button>
-        </div>
-    );
-}
-
+ 
+function App() {  
+     
+  return (  
+    <div className="App">  
+      
+    </div>  
+  );  
+}  
+ 
 export default App;

@@ -6,6 +6,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 //import GameCollection from './GameCollection';
 //import BookExhibition from './BookExhibition';
+import Layout from './layout';
 import One from './One';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,8 +15,9 @@ root.render(
     {/* <App />
     <ArticleCollection />
     <GameCollection />
-    <BookExhibition /> */}
-    <One />
+    <BookExhibition />
+    <One /> */}
+    <Layout />
   </React.StrictMode>
 );
 
