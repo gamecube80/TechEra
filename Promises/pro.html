@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Promise</title>
+</head>
+
+<body>
+    <h1>Promise</h1>
+    <p id="demo">Hello Internet</p>
+    <p id="demo1">Hello USA</p>
+    <p id="demo2">Hello World</p>
+
+
+    <script>
+        function mydisplay(a) {
+            document.getElementById("demo").innerHTML = a;
+        }
+        let myPromise = new Promise(function (myResolve, myReject) {
+            let x = 0;
+            if (x == 0) {
+                myResolve("OK");
+            } else {
+                myReject("Error");
+            }
+        });
+
+        myPromise.then(function (value) { mydisplay(value); },
+            function (error) { mydisplay(error); });
+
+    </script>
+
+    <script>
+        function mydisplay1(a) {
+            document.getElementById("demo1").innerHTML = a;
+        }
+        let myPromise2 = new Promise(function (myResolve, myReject) {
+            let x = 10;
+            if (x >= 5) {
+                myResolve("OK");
+            } else {
+                myReject("Error");
+            }
+        });
+
+        myPromise.then(function (value) { mydisplay1(value); },
+            function (error) { mydisplay1(error); });
+
+    </script>
+
+    <script>
+        function mydisplay2(a) {
+            document.getElementById("demo2").innerHTML = a;
+        }
+        let myPromise3 = new Promise(function (myResolve, myReject) {
+            let x = 4;
+            if (x <= 5) {
+                myResolve("OK");
+            } else {
+                myReject("Error");
+            }
+        });
+
+        myPromise.then(function (value) { mydisplay2(value); },
+            function (error) { mydisplay2(error); });
+
+    </script>
+
+</body>
+
+</html>

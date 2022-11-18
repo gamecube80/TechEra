@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function Hello() {
+            console.log("Hello");
+        }
+        function Grade(mark) {
+            mark = document.getElementById("grade").value;
+            if (mark > 70) {
+                alert("pass");
+            }
+            else {
+                alert("fail");
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Grade Student</h1>
+    <form>
+        <label for="Name">First name:</label><br>
+        <input type="text" id="Name" name="name" value = "Jack"><br>
+        <label for="grade">Grade:</label><br>
+        <input type="text" id=grade name="grade" value = "">
+      </form>
+
+    <input type="button" onclick="Grade(grade)" value="Grade">
+</body>
+
+</html>

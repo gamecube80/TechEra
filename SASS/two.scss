@@ -1,0 +1,42 @@
+$newwidth1: 800px;
+$newwidth2: 1400px;
+$newwidth3: 600px;
+$newcolor: blue;
+$newbgcolor : pink;
+$newbgcolor2 : aquamarine;
+$newbgcolor3 : blanchedalmond;
+$newborder1: 2px red dotted;
+$newborder2: 1px lightgreen;
+$newborder3: 3px yellow;
+$newtextColor: orange;
+$newh2color: purple;
+
+
+
+body {
+    background-color: $newbgcolor;
+    color: $newcolor;
+}
+
+#demo {
+    width: $newwidth1;
+    border: $newborder1;
+}
+
+#box1 {
+    background-color: olive;
+    width: $newwidth2;
+    border: $newborder2;
+}
+
+#box2 {
+    color: $newtextColor;
+    background-color: $newbgcolor2;
+    width: $newwidth3;
+    border: $newborder3;
+}
+
+#h2 {
+    color: $newh2color;
+    background-color: $newbgcolor3;
+}
