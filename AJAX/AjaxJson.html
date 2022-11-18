@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax-json</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script>
+        function display() {
+            var url = "http://date.jsontest.com/";
+            var req;
+
+            if (window.XMLHttpRequest) {
+                req = new XMLHttpRequest();
+            }
+            else if (window.ActiveXObject) {
+                req = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            else {
+                console.log("Something went wrong");
+            }
+
+            req.onreadystatechange = function () {
+                if (req.readyState == 4) {
+                    var jsonObj = JSON.parse(req.responseText);
+                    document.getElementById("date").innerHTML = jsonObj.date;
+                    document.getElementById("time").innerHTML = jsonObj.time;
+                }
+            }
+            req.open("GET", url, true);
+            req.send();
+        }
+    </script>
+
+    <script type="application/javascript">
+        function loadJSON() {
+            var data_file = "data.json";
+            var req = new XMLHttpRequest();
+
+            if (window.XMLHttpRequest) {
+                req = new XMLHttpRequest();
+            }
+            else if (window.ActiveXObject) {
+                req = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            else {
+                console.log("Something went wrong");
+            }
+
+            req.onreadystatechange = function () {
+
+                if (req.readyState == 4) {
+                    var jsonObj = JSON.parse(req.responseText);
+
+                    document.getElementById("Name").innerHTML = jsonObj.name;
+                    document.getElementById("Country").innerHTML = jsonObj.country;
+                }
+            }
+
+            req.open("GET", data_file, true);
+            req.send();
+        }
+
+    </script>
+
+    <script type="application/javascript">
+        function happyBirthday() {
+            var data_file = "data1.json";
+            var req = new XMLHttpRequest();
+
+            if (window.XMLHttpRequest) {
+                req = new XMLHttpRequest();
+            }
+            else if (window.ActiveXObject) {
+                req = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            else {
+                console.log("Something went wrong");
+            }
+
+            req.onreadystatechange = function () {
+
+                if (req.readyState == 4) {
+                    var jsonObj = JSON.parse(req.responseText);
+
+                    document.getElementById("Name1").innerHTML = jsonObj.name1;
+                    document.getElementById("Age").innerHTML = jsonObj.age;
+                }
+            }
+
+            req.open("GET", data_file, true);
+            req.send();
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <main>
+        <div id="demo">
+            <h1>Welcome to AJAX-json</h1>
+            Date:<span id="date"></span><br>
+            Time:<span id="time"></span><br>
+
+            <button type="button" onclick="display()">Display Data</button>
+        </div>
+
+        <table class="src">
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>
+                    <div id="Name">Dan</div>
+                </td>
+                <td>
+                    <div id="Country">America</div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="central">
+            <button type="button" onclick="loadJSON()">Update Details </button>
+        </div>
+
+        <table class="src1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>
+                    <div id="Name1">Zach</div>
+                </td>
+                <td>
+                    <div id="Age">20</div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="central1">
+            <button type="button" onclick="happyBirthday()">Happy Birthday</button>
+        </div>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

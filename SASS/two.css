@@ -1,0 +1,23 @@
+body {
+  background-color: pink;
+  color: grey;
+}
+
+#demo {
+  width: 800px;
+  background-color: orange;
+  border: 2px blue dotted;
+}
+
+#box1 {
+  width: 1400px;
+  color: black;
+  background-color: white;
+  border: 3px black;
+}
+
+#box2 {
+  width: 400px;
+  background: purple;
+  color: olive;
+}

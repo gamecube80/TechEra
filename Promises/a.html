@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Promise</h1>
+    <p1 id="demo">Promise</p1><br>
+    <p2 id="demo1">Promise 2</p2><br>
+
+    <script>
+        function myDemo(a) {
+            document.getElementById("demo").innerHTML = a;
+        }
+
+        let myPromise = new Promise(function (myResolve, myReject) {
+            let x = 1;
+            if (x == 1) {
+                myResolve("Okay");
+            }
+            else {
+                myReject("Not okay");
+            }
+        });
+
+        myPromise.then(
+            function (val) { myDemo(val); },
+            function (error) { myDemo(error); }
+        )
+    </script>
+
+    <script>
+        function myDemo(a) {
+            document.getElementById("demo1").innerHTML = a;
+        }
+
+        let myPromise1 = new Promise(function (myResolve, myReject) {
+            let x = 5 + 5;
+            if (x == 2 * 5) {
+                myResolve("It worked!");
+            }
+            else {
+                myReject("It didn't work!");
+            }
+        });
+
+        myPromise1.then(
+            function (val) { myDemo(val); },
+            function (error) { myDemo(error); }
+        )
+    </script>
+
+</body>
+
+</html>
