@@ -50,6 +50,14 @@
   justify-content: center;
 }
 
+.About {
+  text-align: center;
+}
+
+.Photos {
+  text-align: center;
+}
+
 .Buttons {
   text-align: center;
   align-items: center;
