@@ -28,6 +28,7 @@
 
 .App-link {
   color: #61dafb;
+  display: inline;
 }
 
 @keyframes App-logo-spin {
@@ -42,8 +43,6 @@
 
 .Home {
   text-align: center;
-  color: purple;
-  background-color: orange;
 }
 
 .Home-header {
@@ -85,4 +84,8 @@
 
 .Car {
   text-align: center;
+}
+
+.Layout-Link {
+  display: inline;
 }
