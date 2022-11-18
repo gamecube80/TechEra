@@ -67,4 +67,4 @@ export class Hideshow extends Component {
 }
 
 
-export default Hideshow  
+export default Hideshow;
