@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Dev Tools</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+    <h1 id="a" className="a">Hello JavaScript</h1>
+    <p id="b" className="b">Here is some subtext</p>
+
+    <form>
+        <label id="First Name">First name:</label><br>
+        <input id="First Name" type="text"><br>
+        <label id="Last Name">Last name:</label><br>
+        <input id="Last Name" type="text"><br>
+        <label id="Address">Address:</label><br>
+        <input id="Address" type="text"><br>
+        <label id="Password">Password:</label><br>
+        <input id="Password" type="text"><br><br>
+    </form>
+
+    <input type="button" onclick="Submit(grade)" value="Submit">
+
+    <script>
+        function Submit() {
+
+        }
+        var a = document.getElementById("First Name").value;
+
+        document.getElementById("Last Name").innerHTML = a;
+        for (var i = 0; i < 2; i++) {
+
+        }
+
+    </script>
+
+</body>
+
+</html>
