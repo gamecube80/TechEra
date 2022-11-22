@@ -1,16 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { configureStore } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import todoApp from "./reducers/reducers";
 import App from './App.js';
 
-let store = configureStore(todoApp)
+let store = createStore(todoApp)
 let rootElement = document.getElementById('app')
-
-const wrapper = shallow(
-    <App store={store} />
-);
 
 render(
     <Provider store={store}>

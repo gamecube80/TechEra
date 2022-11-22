@@ -1,25 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-//import App from './App';
-//import ArticleCollection from './ArticleCollection';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import GameCollection from './GameCollection';
-//import BookExhibition from './BookExhibition';
-import Layout from './layout';
-import One from './One';
+import { Provider } from 'react-redux';
+import store from './redux/store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App />
-    <ArticleCollection />
-    <GameCollection />
-    <BookExhibition />
-    <One /> */}
-    <Layout />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
+
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <App />
+//   </Provider>
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
