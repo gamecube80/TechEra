@@ -25,9 +25,9 @@ export const initListings = () => {
     };
 };
 
-export const addListing = (name, age) => {
+export const addListing = (name, day, time) => {
     return async dispatch => {
-        const listing = await listingsService.addListing(name, age);
+        const listing = await listingsService.addListing(name, day, time);
         dispatch(
             {
                 type: 'ADD_LISTING',

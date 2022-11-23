@@ -1,15 +1,8 @@
 const mockData = [
     {
-        name: "Dan",
-        age: 31
-    },
-    {
-        name: "Zach",
-        age: 29
-    },
-    {
-        name: "Drew",
-        age: 27
+        name: "Laundry",
+        day: "Tuesday",
+        time: "7:00"
     }
 ];
 
@@ -17,10 +10,11 @@ const getAll = () => {
     return mockData;
 }
 
-const addListing = (name, age) =>{
+const addListing = (name, day, time) =>{
     const listing = {
         name,
-        age
+        day,
+        time
     };
     return listing;
 };

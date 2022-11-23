@@ -6,18 +6,20 @@ import { initListings, addListing, deleteListing } from './redux/listingsReducer
 
 const SubmitListing = () => {
   const [name, setName] = useState();
-  const [age, setAge] = useState();
+  const [day, setDay] = useState();
+  const [time, setTime] = useState();
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addListing(name, age));
+    dispatch(addListing(name, day, time));
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" placeholder='Name' onChange={({ target }) => setName(target.value)} />
-      <input type="text" placeholder='Age' onChange={({ target }) => setAge(target.value)} />
+      <input type="text" placeholder='Day' onChange={({ target }) => setDay(target.value)} />
+      <input type="text" placeholder='Time' onChange={({ target }) => setTime(target.value)} />
       <button type='submit'> Submit </button>
     </form>
   );
@@ -38,7 +40,7 @@ function App() {
   return (
     <div className='App'>
       {listings.map((listing) => (
-        <p>{listing.name},{listing.age}|<span onClick={() => removeListing(listing.name)}>(X)</span></p>
+        <p>{listing.name},{listing.day},{listing.time}|<span onClick={() => removeListing(listing.name)}>(X)</span></p>
       ))}
       <br />
       <SubmitListing />
