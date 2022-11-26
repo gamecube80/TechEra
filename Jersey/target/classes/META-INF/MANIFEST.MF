@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: gamec
+Build-Jdk: 18.0.1.1
+Implementation-Title: Spring Boot Jersey Blank Project (from https://git
+ hub.com/making/spring-boot-jersey-blank)
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.demo
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: com.demo.Jersey.App
+Created-By: Maven Integration for Eclipse
+
