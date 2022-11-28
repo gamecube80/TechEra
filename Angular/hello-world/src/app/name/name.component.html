@@ -1,0 +1,6 @@
+<h1>Hello {{fname + ' ' + lname}}</h1>
+
+<p>First Name: <input type="text" ng-Model="fname"
+    (change)='onChangeEventFirst($event)' /></p>
+<p>Last Name: <input type="text" ng-Model="lname"
+    (change)='onChangeEventLast($event)' /></p>
