@@ -1,0 +1,15 @@
+server:
+  port: 6002
+
+spring:
+  application:
+    name: FOOD-ITEM-SERVICE
+
+eureka:
+  client:
+    fetch-with-eureka: true
+    fetch-registry: true
+    servivce-url:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost

@@ -1,0 +1,1 @@
+(()=>{"use strict";!function(){for(let o=0;o<=100;o++)console.log("Numbers: ",o)}(),function(){for(let o=0;o<=100;o++)o%2==0&&console.log("Even Number: ",o)}(),function(){for(let o=0;o<=100;o++)o%2!=0&&console.log("Odd Number: ",o)}()})();

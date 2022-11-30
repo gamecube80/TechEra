@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foodservice/foodservice.iml" filepath="$PROJECT_DIR$/foodservice/foodservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/restaurant-food-microservice-main.iml" filepath="$PROJECT_DIR$/.idea/restaurant-food-microservice-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restaurantservice/restaurantservice.iml" filepath="$PROJECT_DIR$/restaurantservice/restaurantservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-registry/service-registry.iml" filepath="$PROJECT_DIR$/service-registry/service-registry.iml" />
+    </modules>
+  </component>
+</project>
