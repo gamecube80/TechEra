@@ -2,7 +2,7 @@
 <html>
 
 <body>
-  <!-- <div ng-app="" ng-init="">
+  <div ng-app="" ng-init="">
     <h1>Hello {{fname + ' ' + lname}}</h1>
     <p>First Name: <input style="background-color: red;" type="text" ng-Model="fname"
         (change)='onChangeEventFirst($event)' /></p>
@@ -10,7 +10,53 @@
         (change)='onChangeEventLast($event)' /></p>
     <input style="color: white; font-weight: bold; background-color: black;" ng-model="a" type="submit" value="Submit">
     <p>Result of a + b is: {{a+b}}</p>
-  </div> -->
+  </div>
+
+  <div ng-model="pageTitle"> {{ pageTitle }} </div>
+  <div ng-model="value"> {{ value }} </div>
+  <div ng-model="bool"> {{ bool }} </div>
+  <div> {{ 2 + 3 }}</div>
+  <br />
+
+  <div ng-model="madLibs"> There was once a man from {{country}}, who dreampt he was eating his {{object}}, When he woke
+    up, he was missing his {{object2}}.</div>
+  <br />
+
+  <div ng-app="" ng-init="Dan">
+    <p>Input a value in the textbox below</p>
+    <p>Name: <input type="text" ng-model="fname1" (change)='onChangeEventFirst1($event)' /></p>
+    <p>You have written {{fname1}} in the textbox</p>
+  </div>
+  <br />
+
+  <div *ngFor="let day of weekdays">
+    <ng-container *ngIf="(day == 'Saturday' || day == 'Sunday'); else elseTemplate">
+      <h3>{{ day }} is a weekend! </h3>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <h3>{{ day }} is not weekend! </h3>
+    </ng-template>
+  </div>
+  <br />
+
+  <h1>{{oneway}}</h1>
+
+  <p [innerHTML]="text1"></p>
+  <div [innerHTML]="text2"></div>
+
+  <img [src]="itemImageUrl">
+  <img bind-src="itemImageUrl">
+
+  <p [style.color]="color">This is red</p>
+
+  <h2 class="spen" style="color: salmon">{{three}}</h2>
+  <input type="text" [(ngModel)]="three" value="save">
+
+  <h2 class="spen" style="color: royalblue;">Event binding with mouse click</h2>
+  <input type="button" (click)="savedata()" name="value" value="save">
+
+  <p>The day is: {{ ourDateDay | date:'fullDate'}}</p>
+
 </body>
 
 </html>
