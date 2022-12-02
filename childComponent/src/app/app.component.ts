@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Child Components';
+
+  firstname: string = "";
+
+  onChangeEventFirst(event: any) {
+
+    this.firstname = (event.target.value);
+
+  }
 }
