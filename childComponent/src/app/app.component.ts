@@ -8,11 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Child Components';
 
-  firstname: string = "";
+  // firstname: string = "";
 
-  onChangeEventFirst(event: any) {
-
-    this.firstname = (event.target.value);
-
+  onSubmit(data: any) {
+    console.log(data.value);
   }
+
+  // onChangeEventFirst(event: any) {
+
+  //   this.firstname = (event.target.value);
+
+  // }
 }
